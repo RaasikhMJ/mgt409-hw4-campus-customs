@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App check — Campus Customs</title>
+  <style>
+    body { margin: 0; background: #f6f1e8; color: #14161c; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 980px; margin: 0 auto; padding: 40px 24px 64px; }
+    h1 { font-family: Georgia, serif; font-size: 40px; margin: 0 0 6px; }
+    .lede { color: #4a4f5c; margin: 0 0 36px; }
+    section { background: #fff; border: 1px solid #e3d9c6; border-left: 4px solid #c6a15b; border-radius: 10px; padding: 22px 24px; margin: 0 0 28px; }
+    h2 { font-family: Georgia, serif; margin: 0 0 4px; }
+    .kicker { color: #9a7a3a; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; margin: 0 0 10px; }
+    img { display: block; width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; margin: 12px 0; }
+    p.proof { margin: 0; }
+    code { background: #f2ece0; padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Campus Customs — app check</h1>
+  <p class="lede">Live site tested on October 22, 2026 with the front end (Vite) and back end (FastAPI + PydanticAI) running against <code>data/campus_customs.db</code>.</p>
+
+  <section>
+    <p class="kicker">Check 1</p>
+    <h2>Chat checks an item's inventory and price</h2>
+    <img src="app_check_images/inventory.png" alt="Swag stylist answering how many Baseball Left Chest Crewnecks are in stock in medium and XL" />
+    <p class="proof">Asked the stylist how many Baseball Left Chest Crewnecks are in medium and XL and what they cost. It answered <b>$58, 5 left in medium, XL out of stock (0 left)</b>, which matches the <code>catalogue</code> price and the <code>inventory</code> rows in the database (M = 5, XL = 0). The stock comes from the tools, and the sold-out size is stated plainly.</p>
+  </section>
+
+  <section>
+    <p class="kicker">Check 2</p>
+    <h2>Dynamic search-result cards after a category question</h2>
+    <img src="app_check_images/search_cards.png" alt="Asking what hoodies the shop has puts 24 hoodie product cards on the page" />
+    <p class="proof">Asked "What hoodies do you have?" The agent returned structured product matches, and the page rendered them as cards under "On the glass" (24 pieces, each with image, name, price, and short description) while the chat gave a short summary.</p>
+  </section>
+
+  <section>
+    <p class="kicker">Check 2, continued</p>
+    <h2>A card from the chat still opens the single-item page</h2>
+    <img src="app_check_images/card_opens_detail.png" alt="Clicking the Champion Reverse Weave Hoodie card opens its detail page with large image, price, description, and sizes" />
+    <p class="proof">Clicked the Champion Reverse Weave Hoodie card that the chat put on the page. It opened the detail view: large image on the left; price, description, colors, and sizes with stock (XS out, S 25 in stock) on the right. The page also brings that piece up under the navigation, which is usability improvement 2.</p>
+  </section>
+
+  <section>
+    <p class="kicker">Check 3 · Usability improvement 1</p>
+    <h2>Search the rack</h2>
+    <img src="app_check_images/search_rack.png" alt="Typing baseball in the Find a piece box filters the products page to 4 baseball pieces" />
+    <p class="proof">Typed "baseball" into the Find a piece box on the Products page. The 102-piece rack filtered down to the 4 baseball items, and the counter beside the box reads "4 on the glass," so a shopper finds a piece without scrolling the whole catalogue.</p>
+  </section>
+</main>
+</body>
+</html>
