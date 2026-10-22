@@ -178,7 +178,7 @@ The card prompt asked for the search and for the page to show the matches. It di
 
 ## Problem 8: Customer memory
 
-**Status:** In progress. Signed-in chats are saved and the agent sees the shopper and the open piece. Guests can still chat.
+**Status:** Done. Signed-in chats are saved in `chat_messages` and reload on return, and the agent sees the shopper and the open piece. Guests can still chat.
 
 **Prompt:**
 
@@ -194,7 +194,7 @@ The first prompt asked for saved history, the shopper's name and email, and the 
 
 ## Problem 9: Usability improvements
 
-**Status:** In progress. Four changes are in the shop, written up in `output/usability.md`.
+**Status:** Done. Four changes are in the shop, written up in `output/usability.md`.
 
 **Prompt:**
 
@@ -210,7 +210,7 @@ The first prompt asked for two front-end improvements and two agent improvements
 
 ## Problem 10: Style the website
 
-**Status:** In progress. The storefront note is in `output/design.md`.
+**Status:** Done. The storefront note is in `output/design.md`.
 
 **Prompt:**
 
