@@ -47,7 +47,7 @@ The first prompt asked for a spoken summary of the three tables. It did not ask 
 
 ## Problem 3: Build the Campus Customs website
 
-**Status:** In progress. The React shop is in `frontend/`.
+**Status:** Done. The React shop is in `frontend/`: nav bar, Home, Products from the database with photos, single-item pages, and the chat panel in the bottom right.
 
 **Prompt:**
 
@@ -97,7 +97,7 @@ The check prompt asked for proof that the seed user and a new account can sign i
 
 ## Problem 5: PydanticAI agent backend
 
-**Status:** In progress. The chat widget posts to the agent through `backend/main.py`.
+**Status:** Done. The chat widget posts to the agent through `backend/main.py`, and the agent is the four files under `backend/`.
 
 **Prompt:**
 
@@ -140,7 +140,7 @@ The chat-route prompt asked for a website message to come back from `main.py`. I
 
 ## Problem 6: Tools: product info and stock
 
-**Status:** In progress. Description, price, and size counts are read from `data/campus_customs.db`.
+**Status:** Done. Description, price, and size counts are read from `data/campus_customs.db`, and a sold-out size is said plainly.
 
 **Prompt:**
 
@@ -162,7 +162,7 @@ The return-types prompt asked for the prompt file and the models. It did not ask
 
 ## Problem 7: Chat search that updates the page
 
-**Status:** In progress. A type question returns structured cards and the page renders them.
+**Status:** Done. A type question returns structured cards, the page renders them, and each card opens its single-item page.
 
 **Prompt:**
 
